@@ -164,6 +164,12 @@ export class APIService {
   }
 
 
+  signUp(user){
+    const url = `${API_URL}/api/users/`;
+    return axios.post(url, user);
+  }
+
+
   authenticateLogin(credentials) {
     const url = `${API_URL}/auth/`;
     return axios.post(url, credentials);

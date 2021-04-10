@@ -14,6 +14,9 @@
           dark
         >{{ item.title }}</v-btn>
         <v-btn flat dark text rounded v-if="!authenticated"
+               @click="signUp">Sign Up
+        </v-btn>
+        <v-btn flat dark text rounded v-if="!authenticated"
                @click="login">Log in
         </v-btn>
         <v-btn flat dark text rounded v-if="authenticated"
@@ -37,6 +40,8 @@
                           :key="item.title"
                           :to="item.url"
             >{{ item.title }}</v-list-item>
+            <v-list-item v-if="!authenticated"
+                         @click="signUp">Sign Up</v-list-item>
             <v-list-item v-if="!authenticated"
                          @click="login">Log in</v-list-item>
             <v-list-item v-if="authenticated"
@@ -96,6 +101,9 @@ export default {
     },
     login() {
       router.push("/auth");
+    },
+    signUp() {
+      router.push("/sign-up");
     },
   }
 };
