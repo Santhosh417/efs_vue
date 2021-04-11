@@ -49,11 +49,13 @@
             <template v-slot:item="props">
               <tr>
                 <td align="left">{{ props.item.cust_number }}</td>
-                <td align="left">{{ props.item.name }}</td>
+                <td align="left">{{ props.item.category }}</td>
                 <td nowrap="true" align="left">{{ props.item.symbol }}</td>
-                <td nowrap="true" align="left">{{ props.item.quantity }}</td>
-                <td nowrap="true" align="left">{{ props.item.purchase_price }}</td>
-                <td nowrap="true" align="left">{{ props.item.purchase_date }}</td>
+                <td nowrap="true" align="left">{{ props.item.description }}</td>
+                <td nowrap="true" align="left">{{ props.item.acquired_value }}</td>
+                <td nowrap="true" align="left">{{ props.item.acquired_date }}</td>
+                <td nowrap="true" align="left">{{ props.item.recent_value }}</td>
+                <td nowrap="true" align="left">{{ props.item.recent_date }}</td>
                 <td align="center"><v-icon @click="updateFund(props.item)">mdi-pencil</v-icon></td>
                 <td align="center"><v-icon @click="deleteFund(props.item)">mdi-delete</v-icon></td>
               </tr>
@@ -90,11 +92,15 @@
                       </v-list-item>
                       <v-list-item>
                         <v-list-item-content>Quantity:</v-list-item-content>
-                        <v-list-item-content class="align-end">{{ item.quantity }}</v-list-item-content>
+                        <v-list-item-content class="align-end">{{ item.description }}</v-list-item-content>
                       </v-list-item>
                       <v-list-item>
-                        <v-list-item-content>Purchase Price:</v-list-item-content>
-                        <v-list-item-content class="align-end">{{ item.purchase_price }} on {{ item.purchase_date }}</v-list-item-content>
+                        <v-list-item-content>Acquired Value:</v-list-item-content>
+                        <v-list-item-content class="align-end">{{ item.acquired_value }} on {{ item.acquired_date }}</v-list-item-content>
+                      </v-list-item>
+                      <v-list-item>
+                        <v-list-item-content>Recent Value:</v-list-item-content>
+                        <v-list-item-content class="align-end">{{ item.recent_value }} on {{ item.recent_date }}</v-list-item-content>
                       </v-list-item>
                     </v-list>
                   </v-card>
