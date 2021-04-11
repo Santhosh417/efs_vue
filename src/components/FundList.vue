@@ -126,11 +126,14 @@ export default {
     isMobile: false,
     headers: [
       {text: 'Customer Number', sortable: false, align: 'left',},
+      {text: 'Category', sortable: false, align: 'left',},
       {text: 'Symbol', sortable: false, align: 'left',},
-      {text: 'Name', sortable: false, align: 'left',},
+      {text: 'Description', sortable: false, align: 'left',},
       {text: 'Quantity', sortable: false, align: 'left',},
-      {text: 'Purchase_Price', sortable: false, align: 'left',},
-      {text: 'Purchase_Date', sortable: false, align: 'left',},
+      {text: 'Acquired Value', sortable: false, align: 'left',},
+      {text: 'Acquired Date', sortable: false, align: 'left',},
+      {text: 'Recent Value', sortable: false, align: 'left',},
+      {text: 'Recent Date', sortable: false, align: 'left',},
       {text: 'Update', sortable: false, align: 'left',},
       {text: 'Delete', sortable: false, align: 'left',}
     ],

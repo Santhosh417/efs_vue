@@ -40,31 +40,44 @@
                     ></v-select>
 
                     <v-text-field
-                      v-model="fund.name"
-                      label="Name"
+                      v-model="fund.category"
+                      label="Category"
                       required
                     />
+
                     <v-text-field
                       v-model="fund.symbol"
                       label="Symbol"
                       required
                     />
+
                     <v-text-field
-                      v-model="fund.quantity"
-                      label="Quantity"
+                      v-model="fund.description"
+                      label="Description"
+                      required
+                    />
+                    <v-text-field
+                      v-model="fund.acquired_value"
+                      label="Acquired Value"
                       required
                       type="number"
                     />
                     <v-text-field
-                      v-model="fund.purchase_price"
-                      label="Purchase_Price"
+                      v-model="fund.acquired_date"
+                      label="Acquired Date"
+                      type="date"
                       required
                     />
                     <v-text-field
-                      v-model="fund.purchase_date"
-                      label="Purchase_Date"
+                      v-model="fund.recent_value"
+                      label="Recent Value"
                       required
+                    />
+                    <v-text-field
+                      v-model="fund.recent_date"
+                      label="Recent Date"
                       type="date"
+                      required
                     />
                   </v-container>
                   <v-btn v-if="!isUpdate" class="blue white--text" @click="createFund">Save</v-btn>
